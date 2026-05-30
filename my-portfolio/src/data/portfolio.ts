@@ -131,7 +131,7 @@ export const works:Work[]=[
         link: "",
         venues: [],
         techpoint: "",
-        designNotes: undefined,
+        designNotes: null,
         implementationThene: "",
         troublesooting: "",
         performance: ""
