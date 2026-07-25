@@ -5,7 +5,12 @@ const CATEGORY_LABELS:Record<string,string>={
     all:'すべて',
     game:'ゲーム',
     web:'Web',
-    language:'言語'
+    language:'言語',
+    graphic:'グラフィック',
+    sound:'サウンド',
+    vcs:'バージョン管理',
+    os:'OS',
+    tool:'ツール・ライブラリ',
 }
 
 interface LevelConfig{
@@ -26,52 +31,75 @@ function getLevelConfig(level:number):LevelConfig{
 }
 
 function SkillCard({skill}:{skill:Skill}){
-    const config=getLevelConfig(skill.level)
-    return(
-        <div className="skill-card">
-            <div className="skill-card-heade">
-                <div className="skill-card-title-row">
-                    <span className="skill-card-name">{skill.name}</span>
-                    <span className="skill-card-version">{skill.version}</span>
-                </div>
-            </div>
+    const config = getLevelConfig(skill.level)
+
+  return (
+    <div className="skill-card">
+      <div className="skill-card-header">
+        <div className="skill-card-title-row">
+          <span className="skill-card-name">{skill.name}</span>
+          <span className="skill-card-version">{skill.version}</span>
+        </div>
+        <span
+          className="skill-card-badge"
+          style={{ color: config.color, borderColor: config.color }}
+        >
+          {config.label}
+        </span>
+      </div>
+
+      <div className="skill-bar-bg">
+        <div
+          className="skill-bar-fill"
+          style={{ width: `${skill.level}%` }}
+        />
+      </div>
+
+      {skill.note && (
+        <p className="skill-note">
+          <span className="skill-note-icon">✦</span>
+          {skill.note}
+        </p>
+      )}
+    </div>
+  )
+}
+export default function Skills() {
+  const [activeCategory, setActiveCategory] = useState('all')
+
+  const categories = ['all', ...new Set(skills.map((s) => s.category))]
+
+  const filtered =
+    activeCategory === 'all'
+      ? skills
+      : skills.filter((s) => s.category === activeCategory)
+
+  return (
+    <section className="section" id="skills">
+      <div className="container">
+        <h2 className="section-title">
+          <span>Skills</span>
+        </h2>
+        <p className="section-sub">技術スタック — バージョン・できること・経験を明記</p>
+
+        <div className="skills-categories">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`skill-filter-btn ${activeCategory === cat ? 'active' : ''}`}
+              onClick={() => setActiveCategory(cat)}
+            >
+              {CATEGORY_LABELS[cat] ?? cat}
+            </button>
+          ))}
         </div>
 
-
-    )
-}
-export default function Skills(){
-    const [activeCategory,setActiveCategory]=useState('all')
-    const categorise =['all', ...new Set(skills.map((s)=>(
-        s.category
-    )))]
-    const filtered=activeCategory==='all'
-    ?skills
-    :skills.filter((s)=>s.category === activeCategory)
-    return (
-        <section className="section" id="skills">
-            <div className="container">
-                <h2 className="section-title"><span>Skills</span></h2>
-                <p className="section-sub">技術スタック</p>
-                <div className="skills-categories">
-                    {categorise.map((cat)=>(
-                    <button 
-                      key={cat}
-                      className={`skill-filter-btn
-                            ${activeCategory===cat ?'active':''}`}
-                       onClick={()=>setActiveCategory(cat)}
-                    >
-                      {CATEGORY_LABELS[cat] ?? cat}
-                    </button>
-                    ))}
-                </div>
-
-                <div className="skills-grid">
-                    {filtered.map((skill)=>(
-                        <SkillCard key={skill.name} skill={skill} />
-                    ))}
-                </div>
-            </div>
-        </section>
-    )
+        <div className="skills-grid">
+          {filtered.map((skill) => (
+            <SkillCard key={skill.name} skill={skill} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }

@@ -86,18 +86,18 @@ export interface TimelineItem{
 }
 
 export const profile:Profile = {
-    name: "",
-    nameEn: "",
+    name: "森藤 成哉",
+    nameEn: "Seiya Morifuji",
     role: "",
-    school: "",
-    department: "",
-    graduationYear: "",
+    school: "京都デザイン&テクノロジー専門学校",
+    department: "スーパーゲームクリエイター専攻",
+    graduationYear: "2028年3月卒業見込み",
     bio: "",
     motto: "",
     avater: "",
     links: {
-        Github: "",
-        twitter: "",
+        Github: "https://github.com/ika9812",
+        twitter: "https://x.com/aadd390768",
         email: ""
     }
 }

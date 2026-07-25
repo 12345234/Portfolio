@@ -1,11 +1,8 @@
-/* ===========================
-   ヒーロー（トップのメインビジュアル）
-   =========================== */
 .hero {
-  min-height: 100vh; /* 画面の高さいっぱいに表示する */
+  min-height: 100vh; 
   display: flex;
   align-items: center;
-  padding-top: 80px;  /* ヘッダーの高さ分ずらす */
+  padding-top: 80px;  
   position: relative;
   overflow: hidden;
 }
@@ -93,7 +90,6 @@
   margin-bottom: 24px;
 }
 
-/* 短い自己紹介文 */
 .hero-bio {
   max-width: 520px;
   color: var(--color-text-muted);
@@ -102,7 +98,6 @@
   line-height: 1.8;
 }
 
-/* モットー・座右の銘の表示エリア（左ボーダー付き） */
 .hero-motto {
   display: inline-flex;
   align-items: center;
@@ -115,32 +110,29 @@
   padding: 12px 20px;
   border-left: 2px solid var(--color-accent);
   background: rgba(124, 106, 247, 0.06);
-  border-radius: 0 var(--radius) var(--radius) 0; /* 左側は角丸なし、右側だけ角丸 */
+  border-radius: 0 var(--radius) var(--radius) 0; 
 }
 
-/* モットーの引用符マーク */
 .hero-motto-mark {
   font-family: Georgia, serif;
   font-size: 1.4rem;
   line-height: 1;
   color: var(--color-accent);
   opacity: 0.6;
-  user-select: none; /* テキスト選択できないようにする */
+  user-select: none;
 }
 
-/* ボタン群の横並びエリア */
 .hero-actions {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-/* 画面下部の「スクロールしてね」インジケーター */
 .hero-scroll {
   position: absolute;
   bottom: 32px;
   left: 50%;
-  transform: translateX(-50%); /* 水平中央に配置 */
+  transform: translateX(-50%); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,7 +143,6 @@
   animation: bounce 2s infinite;
 }
 
-/* スクロールインジケーターの縦線 */
 .hero-scroll::after {
   content: '';
   width: 1px;
@@ -159,24 +150,21 @@
   background: linear-gradient(to bottom, var(--color-text-muted), transparent);
 }
 
-/* 上下にゆっくり動くアニメーション */
 @keyframes bounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
-/* ===========================
-   アバタープレースホルダー（画像がない場合の代替表示）
-   =========================== */
+
 .avatar-placeholder {
   width: 140px;
   height: 140px;
-  border-radius: 50%; /* 完全な円形にする */
+  border-radius: 50%; 
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   margin-bottom: 32px;
-  box-shadow: 0 0 60px rgba(124, 106, 247, 0.3); /* 紫の光彩エフェクト */
+  box-shadow: 0 0 60px rgba(124, 106, 247, 0.3); 
 }

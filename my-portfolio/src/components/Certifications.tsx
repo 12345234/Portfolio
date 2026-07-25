@@ -1,0 +1,1 @@
+import { certification, type Ceartification } from "../data/portfolio";
