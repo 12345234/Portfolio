@@ -1,5 +1,5 @@
 import { FaTrophy, FaLightbulb, FaArrowRight } from 'react-icons/fa6'
-import { GameJam, type gamejam} from '../data/portfolio'
+import { gamejam, type GameJam } from '../data/portfolio'
 
 function JamCard({ jam }: { jam: GameJam }) {
   return (
@@ -53,6 +53,25 @@ function JamCard({ jam }: { jam: GameJam }) {
         </div>
       )}
     </article>
+  )
+}
+
+export default function GameJams() {
+  return (
+    <section className="section" id="gamejams">
+      <div className="container">
+        <h2 className="section-title">
+          <span>Game Jams</span>
+        </h2>
+        <p className="section-sub">ゲームジャム参加実績</p>
+
+        <div className="jam-list">
+          {gamejam.map((jam, index) => (
+            <JamCard key={`${jam.name}-${index}`} jam={jam} />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
