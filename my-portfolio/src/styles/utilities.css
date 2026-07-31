@@ -1,49 +1,44 @@
-/* ===========================
-   ユーティリティクラス
-   複数のセクションで共通して使う汎用スタイル
-   =========================== */
-
-/* コンテンツ幅を制限して中央寄せ */
-.container {
+.container 
+{
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* セクション共通の上下余白 */
-.section {
+.section 
+{
   padding: 96px 0;
 }
 
-/* セクション見出し（英字大文字タイトル） */
-.section-title {
+.section-title
+{
   font-family: var(--font-en);
-  font-size: clamp(2rem, 5vw, 3rem); /* 画面幅に応じてフォントサイズが変わる */
+  font-size: clamp(2rem, 5vw, 3rem); 
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
 }
 
-/* グラデーションで色付けされたタイトルの一部 */
-.section-title span {
+.section-title span 
+{
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* セクション見出し下のサブテキスト */
-.section-sub {
+.section-sub 
+{
   color: var(--color-text-muted);
   font-size: 0.95rem;
   margin-bottom: 56px;
 }
 
-/* スキル・カテゴリなどの小さなラベル */
-.tag {
+.tag 
+{
   display: inline-block;
   padding: 4px 12px;
-  border-radius: 100px; /* 完全な丸みにする */
+  border-radius: 100px;
   font-size: 0.78rem;
   font-family: var(--font-en);
   background: var(--color-surface-2);
@@ -51,8 +46,8 @@
   color: var(--color-text-muted);
 }
 
-/* ボタン共通スタイル */
-.btn {
+.btn 
+{
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -65,26 +60,28 @@
   border: none;
 }
 
-/* 塗りつぶしボタン（グラデーション） */
-.btn-primary {
+.btn-primary 
+{
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
   color: #fff;
 }
 
-.btn-primary:hover {
+.btn-primary:hover 
+{
   opacity: 0.9;
-  transform: translateY(-2px); /* 浮き上がるアニメーション */
+  transform: translateY(-2px); 
   box-shadow: 0 8px 24px rgba(124, 106, 247, 0.4);
 }
 
-/* 枠線だけのボタン */
-.btn-outline {
+.btn-outline 
+{
   background: transparent;
   color: var(--color-text);
   border: 1px solid var(--color-border);
 }
 
-.btn-outline:hover {
+.btn-outline:hover 
+{
   border-color: var(--color-accent);
   color: var(--color-accent);
   transform: translateY(-2px);

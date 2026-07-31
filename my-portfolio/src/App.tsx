@@ -1,4 +1,3 @@
-// src/App.tsx
 import { Routes, Route } from 'react-router-dom'
 import { useTheme } from './hooks/useTheme'
 import ScrollToTop from './components/ScrollToTop'
@@ -7,7 +6,11 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
-
+import Works from './components/Works'
+import Contact from './components/Contact'
+import GameJams from './components/GameJams'
+import Certifications from './components/Certifications'
+import WorkDetail from './Pages/WorkDetail'
 
 function HomePage() {
   return (
@@ -15,6 +18,10 @@ function HomePage() {
       <Hero />
       <About />
       <Skills />
+      <Works />
+      <GameJams />
+      <Certifications />
+      <Contact />
     </>
   )
 }
@@ -28,7 +35,8 @@ export default function App() {
       <Header theme={theme} onThemeToggle={toggle} />
       <main>
         <Routes>
-        <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/works/:id" element={<WorkDetail />} />
         </Routes>
       </main>
       <Footer />

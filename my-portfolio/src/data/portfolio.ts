@@ -1,3 +1,5 @@
+import type { IconType } from 'react-icons'
+import { FaGamepad, FaGlobe, FaCube, FaFolder } from 'react-icons/fa6'
 //プロフィール
 export interface Profile{
     name: string //名前漢字表記
@@ -61,7 +63,7 @@ export interface GameJam{
     date:string//日時
     theme:string//情報
     description:string//作品詳細
-    platform:string//プラットフォーム
+    platform:string[]//プラットフォーム
     role:string//担当箇所
     team:string//チーム情報
     result:string|null//結果
@@ -85,6 +87,14 @@ export interface TimelineItem{
     event:string//イベント
 }
 
+export const CATEGORY_ICON: Record<string, IconType> = {
+  game: FaGamepad,
+  web: FaGlobe,
+  '3d': FaCube,
+}
+
+export const CATEGORY_ICON_FALLBACK: IconType = FaFolder
+
 export const profile:Profile = {
     name: "森藤 成哉",
     nameEn: "Seiya Morifuji",
@@ -94,7 +104,7 @@ export const profile:Profile = {
     graduationYear: "2028年3月卒業見込み",
     bio: "",
     motto: "",
-    avater: "",
+    avater: "null",
     links: {
         Github: "https://github.com/ika9812",
         twitter: "https://x.com/aadd390768",
@@ -144,7 +154,7 @@ export const gamejam:GameJam[]=[
         date: "",
         theme: "",
         description: "",
-        platform: "",
+        platform: [""],
         role: "",
         team: "",
         result: "",
@@ -155,18 +165,17 @@ export const gamejam:GameJam[]=[
     
 export const certification:Ceartification[]=[
     {
-        name: "",
-        date: "",
-        category: "",
-        score: "",
+        name: '普通自動車第一種免許',
+        date: '2024年4月',
+        category: '免許',
+        score: 'null',
         status: "取得済み"
     }
 ]
 
 export const timeline:TimelineItem[]=[
     {
-        year: "",
-        event: ""
+        year: '2024年4月',event: '京都デザイン&テクノロジー専門学校 入学'
     }
 ]
 

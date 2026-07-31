@@ -1,17 +1,14 @@
-/* ===========================
-   スキル セクション
-   =========================== */
 
-/* カテゴリフィルターボタンの横並び */
-.skills-categories {
+.skills-categories 
+{
   display: flex;
   gap: 12px;
   margin-bottom: 40px;
   flex-wrap: wrap;
 }
 
-/* フィルターボタン */
-.skill-filter-btn {
+.skill-filter-btn
+ {
   padding: 8px 20px;
   border-radius: 100px;
   border: 1px solid var(--color-border);
@@ -22,23 +19,23 @@
   transition: all var(--transition);
 }
 
-/* 選択中・ホバー時のフィルターボタン */
 .skill-filter-btn.active,
-.skill-filter-btn:hover {
+.skill-filter-btn:hover 
+{
   border-color: var(--color-accent);
   color: var(--color-accent);
   background: rgba(124, 106, 247, 0.1);
 }
 
-/* スキルカードのグリッドレイアウト */
-.skills-grid {
+.skills-grid 
+{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 幅に応じて自動的にカラム数が変わる */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
   gap: 20px;
 }
 
-/* スキルカード */
-.skill-card {
+.skill-card 
+{
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -50,9 +47,8 @@
   border-color: var(--color-accent);
   box-shadow: 0 4px 24px rgba(124, 106, 247, 0.1);
 }
-
-/* カードヘッダー(名前とバッジを横並び) */
-.skill-card-header {
+.skill-card-header 
+{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -64,25 +60,24 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  min-width: 0; /* テキストが長くても折り返せるようにする */
+  min-width: 0; 
 }
 
-/* スキル名 */
-.skill-card-name {
+.skill-card-name 
+{
   font-family: var(--font-en);
   font-size: 1rem;
   font-weight: 700;
 }
 
-/* バージョン表記（v18 など） */
 .skill-card-version {
   font-size: 0.75rem;
   color: var(--color-text-muted);
   font-family: var(--font-en);
 }
 
-/* 習熟度バッジ（Beginner / Intermediate / Advanced など） */
-.skill-card-badge {
+.skill-card-badge 
+{
   flex-shrink: 0;
   font-size: 0.72rem;
   font-family: var(--font-en);
@@ -91,11 +86,11 @@
   border-radius: 100px;
   border: 1px solid;
   background: transparent;
-  white-space: nowrap; /* 改行させない */
+  white-space: nowrap; 
 }
 
-/* スキルバーの背景（グレーの細いレール） */
-.skill-bar-bg {
+.skill-bar-bg 
+{
   height: 3px;
   background: var(--color-border);
   border-radius: 2px;
@@ -103,16 +98,16 @@
   margin-bottom: 18px;
 }
 
-/* スキルバーの塗りつぶし部分（グラデーション） */
-.skill-bar-fill {
+.skill-bar-fill 
+{
   height: 100%;
   border-radius: 2px;
   background: linear-gradient(to right, var(--color-accent), var(--color-accent-2));
-  transition: width 1s ease; /* 幅が変わるときにアニメーションする */
+  transition: width 1s ease; 
 }
 
-/* できること（タグ一覧） */
-.skill-capabilities {
+.skill-capabilities 
+{
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -120,8 +115,8 @@
   margin-bottom: 14px;
 }
 
-/* 各「できること」タグ */
-.skill-cap-tag {
+.skill-cap-tag 
+{
   font-size: 0.75rem;
   padding: 3px 10px;
   border-radius: 100px;
@@ -131,8 +126,8 @@
   line-height: 1.5;
 }
 
-/* 実装経験メモ（カード下部の補足テキスト） */
-.skill-note {
+.skill-note 
+{
   display: flex;
   align-items: flex-start;
   gap: 6px;
@@ -143,8 +138,8 @@
   border-top: 1px solid var(--color-border);
 }
 
-/* メモの左側アイコン */
-.skill-note-icon {
+.skill-note-icon 
+{
   color: var(--color-accent-2);
   flex-shrink: 0;
   margin-top: 2px;

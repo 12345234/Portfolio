@@ -1,16 +1,13 @@
-/* ===========================
-   資格・実績 セクション
-   =========================== */
 
-/* 資格リスト */
-.cert-list {
+.cert-list 
+{
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* 各資格行（アイコン・名前・カテゴリ・ステータスの4カラム） */
-.cert-row {
+.cert-row 
+{
   display: grid;
   grid-template-columns: 44px 1fr auto auto;
   align-items: center;
@@ -22,12 +19,13 @@
   transition: border-color var(--transition);
 }
 
-.cert-row:hover {
+.cert-row:hover 
+{
   border-color: var(--color-accent);
 }
 
-/* 資格アイコン（絵文字） */
-.cert-icon {
+.cert-icon 
+{
   width: 44px;
   height: 44px;
   background: var(--color-surface-2);
@@ -39,13 +37,13 @@
   flex-shrink: 0;
 }
 
-/* 資格名・日付エリア */
-.cert-main {
-  min-width: 0; /* テキストが長くても折り返せるようにする */
+.cert-main 
+{
+  min-width: 0; 
 }
 
-/* 資格名とスコアバッジの横並び */
-.cert-name-row {
+.cert-name-row 
+{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -53,14 +51,13 @@
   margin-bottom: 3px;
 }
 
-/* 資格名 */
-.cert-name {
+.cert-name 
+{
   font-size: 0.95rem;
   font-weight: 600;
 }
-
-/* スコア表示バッジ（TOEIC 800 など） */
-.cert-score {
+.cert-score 
+{
   font-size: 0.78rem;
   color: var(--color-accent);
   font-family: var(--font-en);
@@ -70,22 +67,20 @@
   border-radius: 100px;
   padding: 1px 9px;
 }
-
-/* 取得日 */
-.cert-date {
+.cert-date 
+{
   font-size: 0.8rem;
   color: var(--color-text-muted);
 }
-
-/* カテゴリタグのラッパー */
-.cert-meta {
+.cert-meta
+{
   display: flex;
   align-items: center;
   min-width: fit-content;
 }
 
-/* カテゴリタグ（Language / Technical など） */
-.cert-category {
+.cert-category 
+{
   font-size: 0.75rem;
   font-family: var(--font-en);
   color: var(--color-text-muted);
@@ -95,9 +90,8 @@
   padding: 2px 10px;
   white-space: nowrap;
 }
-
-/* 取得状況バッジ（取得済み / 勉強中 など） */
-.cert-status {
+.cert-status
+ {
   font-size: 0.78rem;
   font-weight: 600;
   padding: 5px 14px;
@@ -107,26 +101,30 @@
   flex-shrink: 0;
 }
 
-/* スマホ表示：資格行を2カラムに折りたたむ */
-@media (max-width: 640px) {
-  .cert-row {
+@media (max-width: 640px)
+ {
+  .cert-row
+   {
     grid-template-columns: 36px 1fr;
     grid-template-rows: auto auto;
     padding: 16px;
   }
 
-  .cert-icon {
+  .cert-icon 
+  {
     width: 36px;
     height: 36px;
     font-size: 1.1rem;
     grid-row: 1;
   }
 
-  .cert-main {
+  .cert-main 
+  {
     grid-row: 1;
   }
 
-  .cert-meta {
+  .cert-meta
+   {
     grid-column: 2;
     grid-row: 2;
     flex-direction: row;
@@ -135,7 +133,8 @@
     min-width: 0;
   }
 
-  .cert-status {
+  .cert-status 
+  {
     grid-column: 1 / -1;
     grid-row: 3;
     width: fit-content;

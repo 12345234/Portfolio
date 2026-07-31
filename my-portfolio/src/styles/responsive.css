@@ -1,22 +1,23 @@
-/* ===========================
-   レスポンシブ（共通）
-   =========================== */
-/* タブレット以下：ナビ非表示・1カラム化 */
-@media (max-width: 768px) {
-  .header-nav {
-    display: none; /* スマホではナビを非表示にする（ハンバーガーメニューへの移行を想定） */
+@media (max-width: 768px) 
+{
+  .header-nav 
+  {
+    display: none; 
   }
 
-  .about-grid {
+  .about-grid 
+  {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .works-grid {
+  .works-grid 
+  {
     grid-template-columns: 1fr;
   }
 
-  .hero-actions {
-    flex-direction: column; /* ボタンを縦並びにする */
+  .hero-actions
+  {
+    flex-direction: column; 
   }
 }

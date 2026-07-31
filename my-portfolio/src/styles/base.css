@@ -1,38 +1,30 @@
-/* ===========================
-   リセット
-   すべての要素のデフォルト余白をゼロにする
-   box-sizing: border-box でpadding・borderをwidth/heightに含める
-   =========================== */
-*, *::before, *::after {
+
+*, *::before, *::after
+ {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ===========================
-   CSS変数（ダークテーマ・デフォルト）
-   :root に定義した変数はページ全体で使える
-   =========================== */
-:root {
-  --color-bg: #0d0d14;         /* ページ背景色 */
-  --color-surface: #16161f;    /* カード・セクションの背景色 */
-  --color-surface-2: #1e1e2e;  /* カード内の入れ子要素などの背景色 */
-  --color-border: #2a2a3d;     /* ボーダー・区切り線の色 */
-  --color-accent: #7c6af7;     /* メインアクセントカラー（紫） */
-  --color-accent-2: #f76ac8;   /* サブアクセントカラー（ピンク） */
-  --color-text: #e8e8f0;       /* 本文テキストの色 */
-  --color-text-muted: #8888aa; /* 補足テキスト・ラベルなど薄い文字色 */
-  --font-en: 'Space Grotesk', sans-serif; /* 英字フォント */
-  --font-ja: 'Noto Sans JP', sans-serif;  /* 日本語フォント */
-  --radius: 12px;              /* カードなどの角丸の大きさ */
-  --transition: 0.3s ease;     /* ホバーアニメーションの速さ */
+:root
+ {
+  --color-bg: #0d0d14;         
+  --color-surface: #16161f;    
+  --color-surface-2: #1e1e2e;  
+  --color-border: #2a2a3d;     
+  --color-accent: #7c6af7;     
+  --color-accent-2: #f76ac8;   
+  --color-text: #e8e8f0;      
+  --color-text-muted: #8888aa;
+  --font-en: 'Space Grotesk', sans-serif; 
+  --font-ja: 'Noto Sans JP', sans-serif; 
+  --radius: 12px;           
+  --transition: 0.3s ease;    
 }
 
-/* ===========================
-   CSS変数（ライトテーマ）
-   data-theme="light" が <html> に付いたとき上書きされる
-   =========================== */
-[data-theme="light"] {
+
+[data-theme="light"] 
+{
   --color-bg: #f4f4f8;
   --color-surface: #ffffff;
   --color-surface-2: #ebebf3;
@@ -43,46 +35,41 @@
   --color-text-muted: #666680;
 }
 
-/* ライトテーマ時のヘッダー背景（半透明白） */
-[data-theme="light"] .header {
+
+[data-theme="light"] .header 
+{
   background: rgba(244, 244, 248, 0.88);
 }
 
-/* ===========================
-   html
-   =========================== */
-html {
-  scroll-behavior: smooth; /* アンカーリンクをなめらかにスクロールする */
+html
+ {
+  scroll-behavior: smooth; 
 }
 
-/* ===========================
-   body（ページ全体の基本スタイル）
-   =========================== */
-body {
-  background-color: var(--color-bg);   /* 背景色をCSS変数から取得 */
-  color: var(--color-text);            /* 文字色をCSS変数から取得 */
-  font-family: var(--font-ja);         /* フォントをCSS変数から取得 */
-  line-height: 1.7;                    /* 行間を広めに取り読みやすくする */
-  -webkit-font-smoothing: antialiased; /* macOSでフォントをなめらかに描画する */
+body 
+{
+  background-color: var(--color-bg);   
+  color: var(--color-text);            
+  font-family: var(--font-ja);         
+  line-height: 1.7;                    
+  -webkit-font-smoothing: antialiased; 
 }
 
-/* ===========================
-   リンク
-   =========================== */
-a {
+
+a 
+{
   color: var(--color-accent);
   text-decoration: none;
   transition: opacity var(--transition);
 }
 
-a:hover {
+a:hover 
+{
   opacity: 0.8;
 }
 
-/* ===========================
-   画像
-   =========================== */
-img {
-  max-width: 100%; /* 親要素からはみ出さないようにする */
-  display: block;  /* inline要素のデフォルトの下余白をなくす */
+img 
+{
+  max-width: 100%; 
+  display: block; 
 }

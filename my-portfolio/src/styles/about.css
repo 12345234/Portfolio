@@ -1,25 +1,22 @@
-/* ===========================
-   About セクション
-   =========================== */
 
-/* プロフィール情報を2カラムで並べるグリッド */
-.about-grid {
+.about-grid
+ {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: start;
 }
 
-/* プロフィールカード */
-.about-card {
+.about-card 
+{
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: 32px;
 }
 
-/* カード内の小見出し */
-.about-card h3 {
+.about-card h3 
+{
   font-family: var(--font-en);
   font-size: 1rem;
   color: var(--color-accent);
@@ -28,16 +25,16 @@
   letter-spacing: 0.05em;
 }
 
-/* 自己紹介文 */
-.about-bio {
+.about-bio
+ {
   font-size: 0.95rem;
   line-height: 1.9;
   color: var(--color-text-muted);
   margin-bottom: 24px;
 }
 
-/* 学校情報エリア（カード内区切り） */
-.profile-school {
+.profile-school 
+{
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -45,40 +42,40 @@
   border-top: 1px solid var(--color-border);
 }
 
-/* 学校情報の各行（ラベル + 値） */
-.profile-school-row {
+.profile-school-row 
+{
   display: flex;
   gap: 16px;
   font-size: 0.88rem;
 }
 
-/* ラベル（「学校」「専攻」など） */
-.profile-school-row dt {
+.profile-school-row dt 
+{
   width: 36px;
   flex-shrink: 0;
   color: var(--color-text-muted);
 }
 
-/* 値 */
-.profile-school-row dd {
+.profile-school-row dd 
+{
   color: var(--color-text);
 }
 
-/* 卒業年度をアクセントカラーで強調 */
-.profile-graduation {
+.profile-graduation 
+{
   color: var(--color-accent) !important;
   font-weight: 600;
 }
 
-/* 経歴タイムライン */
-.timeline {
+.timeline 
+{
   list-style: none;
   position: relative;
   padding-left: 20px;
 }
 
-/* タイムラインの縦線 */
-.timeline::before {
+.timeline::before 
+{
   content: '';
   position: absolute;
   left: 0;
@@ -88,18 +85,19 @@
   background: var(--color-border);
 }
 
-.timeline li {
+.timeline li 
+{
   position: relative;
   padding-bottom: 20px;
   padding-left: 16px;
 }
 
-.timeline li:last-child {
+.timeline li:last-child 
+{
   padding-bottom: 0;
 }
-
-/* 各項目の丸いドット */
-.timeline li::before {
+.timeline li::before
+ {
   content: '';
   position: absolute;
   left: -24px;
@@ -110,16 +108,16 @@
   background: var(--color-accent);
 }
 
-/* 年号表示 */
-.timeline-year {
+.timeline-year
+ {
   font-family: var(--font-en);
   font-size: 0.8rem;
   color: var(--color-accent);
   margin-bottom: 2px;
 }
 
-/* イベント内容 */
-.timeline-event {
+.timeline-event 
+{
   font-size: 0.9rem;
   color: var(--color-text-muted);
 }

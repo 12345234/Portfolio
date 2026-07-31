@@ -1,31 +1,28 @@
-/* ===========================
-   Contact セクション
-   =========================== */
 
-/* 連絡先を中央寄せで表示するエリア */
-.contact-inner {
+.contact-inner 
+{
   max-width: 560px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* 連絡先の説明文 */
-.contact-desc {
+.contact-desc
+ {
   color: var(--color-text-muted);
   margin-bottom: 40px;
   line-height: 1.8;
 }
 
-/* 連絡先リンクの横並びエリア */
-.contact-links {
+.contact-links 
+{
   display: flex;
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-/* 各連絡先リンクのカード */
-.contact-link-item {
+.contact-link-item 
+{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -39,14 +36,15 @@
   transition: all var(--transition);
 }
 
-.contact-link-item:hover {
+.contact-link-item:hover 
+{
   border-color: var(--color-accent);
   color: var(--color-accent);
-  opacity: 1; /* a:hover の opacity: 0.8 を打ち消す */
+  opacity: 1; 
   transform: translateY(-2px);
 }
 
-/* アイコン（メール・GitHubアイコンなど） */
-.contact-link-icon {
+.contact-link-icon 
+{
   font-size: 1.2rem;
 }

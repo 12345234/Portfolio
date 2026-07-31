@@ -1,4 +1,5 @@
-.hero {
+.hero 
+{
   min-height: 100vh; 
   display: flex;
   align-items: center;
@@ -7,8 +8,8 @@
   overflow: hidden;
 }
 
-/* 右上の紫グラデーション装飾 */
-.hero::before {
+.hero::before 
+{
   content: '';
   position: absolute;
   top: -200px;
@@ -16,11 +17,11 @@
   width: 600px;
   height: 600px;
   background: radial-gradient(circle, rgba(124, 106, 247, 0.15) 0%, transparent 70%);
-  pointer-events: none; /* クリックを透過させる */
+  pointer-events: none;
 }
 
-/* 左下のピンクグラデーション装飾 */
-.hero::after {
+.hero::after 
+{
   content: '';
   position: absolute;
   bottom: -100px;
@@ -31,8 +32,8 @@
   pointer-events: none;
 }
 
-/* 名前の上に表示するキャッチコピー（小さいラベル） */
-.hero-eyebrow {
+.hero-eyebrow 
+{
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -44,16 +45,16 @@
   text-transform: uppercase;
 }
 
-/* eyebrow の左側に引かれる短い横線 */
-.hero-eyebrow::before {
+.hero-eyebrow::before 
+{
   content: '';
   width: 32px;
   height: 1px;
   background: var(--color-accent);
 }
 
-/* 名前（大きいテキスト） */
-.hero-name {
+.hero-name 
+{
   font-family: var(--font-ja);
   font-size: clamp(2.8rem, 8vw, 5.5rem);
   font-weight: 700;
@@ -65,8 +66,8 @@
   gap: 4px;
 }
 
-/* 名前のローマ字表記（小さい） */
-.hero-name-en {
+.hero-name-en 
+{
   font-family: var(--font-en);
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-weight: 400;
@@ -75,22 +76,23 @@
   text-transform: uppercase;
 }
 
-/* 名前のグラデーション部分 */
-.hero-name .gradient {
+.hero-name .gradient
+ {
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* 職種・ロール表示 */
-.hero-role {
+.hero-role 
+{
   font-size: 1.1rem;
   color: var(--color-text-muted);
   margin-bottom: 24px;
 }
 
-.hero-bio {
+.hero-bio
+{
   max-width: 520px;
   color: var(--color-text-muted);
   font-size: 0.95rem;
@@ -98,7 +100,8 @@
   line-height: 1.8;
 }
 
-.hero-motto {
+.hero-motto
+ {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -113,7 +116,8 @@
   border-radius: 0 var(--radius) var(--radius) 0; 
 }
 
-.hero-motto-mark {
+.hero-motto-mark 
+{
   font-family: Georgia, serif;
   font-size: 1.4rem;
   line-height: 1;
@@ -122,13 +126,15 @@
   user-select: none;
 }
 
-.hero-actions {
+.hero-actions 
+{
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-.hero-scroll {
+.hero-scroll 
+{
   position: absolute;
   bottom: 32px;
   left: 50%;
@@ -143,20 +149,23 @@
   animation: bounce 2s infinite;
 }
 
-.hero-scroll::after {
+.hero-scroll::after 
+{
   content: '';
   width: 1px;
   height: 48px;
   background: linear-gradient(to bottom, var(--color-text-muted), transparent);
 }
 
-@keyframes bounce {
+@keyframes bounce 
+{
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
 
-.avatar-placeholder {
+.avatar-placeholder 
+{
   width: 140px;
   height: 140px;
   border-radius: 50%; 
