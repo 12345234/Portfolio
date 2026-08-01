@@ -11,10 +11,11 @@ import Contact from './components/Contact'
 import GameJams from './components/GameJams'
 import Certifications from './components/Certifications'
 import WorkDetail from './Pages/WorkDetail'
+import PasswordGate from './components/PasswordGate'
 
 function HomePage() {
   return (
-    <>
+    <PasswordGate>
       <Hero />
       <About />
       <Skills />
@@ -22,7 +23,7 @@ function HomePage() {
       <GameJams />
       <Certifications />
       <Contact />
-    </>
+    </PasswordGate>
   )
 }
 

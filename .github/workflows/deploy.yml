@@ -40,7 +40,7 @@ jobs:
       - name: Build
         working-directory: my-portfolio
         env:
-        VITE_PORTFOLIO_PASSWORD: ${{ secrets.VITE_PORTFOLIO_PASSWORD }}
+          VITE_PORTFOLIO_PASSWORD: ${{ secrets.VITE_PORTFOLIO_PASSWORD }}
         run: npm run build
 
       - name: Setup Pages
