@@ -16,7 +16,7 @@
   right: -200px;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(124, 106, 247, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(22, 177, 92, 0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -28,7 +28,7 @@
   left: -100px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(247, 106, 200, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(221, 24, 18, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -39,7 +39,7 @@
   gap: 8px;
   font-family: var(--font-en);
   font-size: 0.85rem;
-  color: var(--color-accent);
+  color: #210fc4;
   margin-bottom: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -56,8 +56,8 @@
 .hero-name 
 {
   font-family: var(--font-ja);
-  font-size: clamp(2.8rem, 8vw, 5.5rem);
-  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 1000;
   line-height: 1.1;
   letter-spacing: -0.01em;
   margin-bottom: 16px;
@@ -87,7 +87,7 @@
 .hero-role 
 {
   font-size: 1.1rem;
-  color: var(--color-text-muted);
+  color: #185ebe;
   margin-bottom: 24px;
 }
 

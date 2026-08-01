@@ -21,7 +21,6 @@ export default function Header({ theme, onThemeToggle }: Props) {
     <header className="header">
       <div className="container">
         <div className="header-inner">
-          {/* ロゴ: 常にホームへ戻る */}
           <Link to="/" className="header-logo">
             {profile.nameEn.split(' ')[0]}
             <span>.</span>
@@ -30,8 +29,6 @@ export default function Header({ theme, onThemeToggle }: Props) {
             <ul className="header-nav">
               {navItems.map((item) => (
                 <li key={item.label}>
-                  {/* "/#about" 形式で指定すれば、サブページからもホーム→該当セクションへ遷移できる
-                      （ScrollToTop が hash を見てスクロールする） */}
                   <Link to={`/#${item.hash}`}>{item.label}</Link>
                 </li>
               ))}

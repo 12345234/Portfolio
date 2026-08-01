@@ -31,6 +31,7 @@
   line-height: 1.9;
   color: var(--color-text-muted);
   margin-bottom: 24px;
+  white-space: pre-line;
 }
 
 .profile-school 

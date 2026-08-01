@@ -24,7 +24,7 @@ export interface Skill{
     version: string | null//バージョン情報
     level: number//スキルレベル
     category: string//カテゴリ
-    capabilities: string//出来ること
+    capabilities: string[]//出来ること
     note: string|null//実装経験
 }
 
@@ -40,7 +40,7 @@ export interface Work{
     title: string//タイトル
     genre: string//ジャンル
     category: string//カテゴリ
-    thumbnail: string//サムネイル
+    thumbnail: string|null//サムネイル
     screenshots: string[]//スクショ
     description :string//作品の概要説明
     tags: string[]//タグ
@@ -98,54 +98,100 @@ export const CATEGORY_ICON_FALLBACK: IconType = FaFolder
 export const profile:Profile = {
     name: "森藤 成哉",
     nameEn: "Seiya Morifuji",
-    role: "",
+    role: "Programmer",
     school: "京都デザイン&テクノロジー専門学校",
     department: "スーパーゲームクリエイター専攻",
     graduationYear: "2028年3月卒業見込み",
-    bio: "",
-    motto: "",
+    bio: "aaaaa",
+    motto: "aaaa",
     avater: "null",
     links: {
         Github: "https://github.com/ika9812",
         twitter: "https://x.com/aadd390768",
-        email: ""
+        email: "KTC24A31A0066@edu.kyoto-tech.ac.jp"
     }
 }
 
 export const skills:Skill[] =[
     {
-        name: "",
-        version: "",
-        level: 0,
-        category: "",
-        capabilities: "",
-        note: ""
+        name: "UnrealEngine",
+        version: "5.7",
+        level: 30,
+        category: "game",
+        capabilities: ["Blueprint","3Dゲーム開発"],
+        note: "授業課題で3Dアクションゲームを作成"
+    },
+    {
+        name: "Unity",
+        version: "6000.3.8f1",
+        level: 60,
+        category: "game",
+        capabilities: ["3D/2Dゲーム開発","ScriptableObject","UniRx","UniTask"],
+        note: "3D/2Dゲームの開発経験あり"
+    },
+    {
+        name: "Blender",
+        version: "4.2",
+        level: 20,
+        category: "graphic",
+        capabilities: ["ローポリモデリング","fbxエクスポート"],
+        note: "ゲーム用のキャラクターを作成。学習中"
+    },
+    {
+        name: "GitHub",
+        version: "Github.com/Actions",
+        level: 35,
+        category: "vcs",
+        capabilities: ["リポジトリ管理","GitHubPages"],
+        note: "GitHubPagesにてこのポートフォリオを公開制作物をGitHubで管理"
     },
 ]
 //作品カードの内容
 export const works:Work[]=[
     {
-        id: 0,
-        title: "",
-        genre: "",
-        category: "",
-        thumbnail: "",
+        id: 1,
+        title: "3Dランゲーム",
+        genre: "3Dアクション",
+        category: "game",
+        thumbnail: './assets/3DRun.png',
         screenshots: [],
-        description: "",
-        tags: [],
-        platform: [],
-        period: "",
-        team: "",
-        role: "",
+        description: "Unityで制作した3Dランゲーム。",
+        tags: ['Unity','C#'],
+        platform: ['Windows','Web'],
+        period: "約1ヶ月",
+        team: "個人製作",
+        role: "プログラマー",
         github: "",
         link: "",
         venues: [],
-        techpoint: "",
+        techpoint: "ObjectPoolでステージを管理しメモリ使用量を抑えました。fogを使用して視認性を低下させることでゲーム性が向上しました。",
         designNotes: null,
         implementationThene: "",
-        troublesooting: "",
+        troublesooting: "ステージの生成間隔に不具合が発生。オブジェクトのサイズを計算して隙間なく生成することに成功しました。",
         performance: ""
     },//配列ごとに作品を作っていく
+    {
+        id: 2,
+        title: "しゃちくん!",
+        genre: "3Dシュミレーション",
+        category: "game",
+        thumbnail: '',
+        screenshots: [],
+        description: "2年次前期にチームで制作,初チーム制作",
+        tags: ['Unity','C#'],
+        platform: ['Windows'],
+        period: "約５ヶ月",
+        team: "チーム製作",
+        role: "プログラマー",
+        github: "https://github.com/Yamahalu69/CampanyAnimal",
+        link: "",
+        venues: [],
+        techpoint: "カメラを切り替えてのミニゲーム実装",
+        designNotes: null,
+        implementationThene: "",
+        troublesooting: "初のチーム制作で完成させることを第一に考えていたためプログラムの設計が上手くできなかった。",
+        performance: ""
+    },
 ]
 
 export const gamejam:GameJam[]=[
@@ -168,15 +214,18 @@ export const certification:Ceartification[]=[
         name: '普通自動車第一種免許',
         date: '2024年4月',
         category: '免許',
-        score: 'null',
+        score: null,
         status: "取得済み"
     }
 ]
 
 export const timeline:TimelineItem[]=[
-    {
-        year: '2024年4月',event: '京都デザイン&テクノロジー専門学校 入学'
-    }
+    {year: '2024年4月',event: '京都デザイン&テクノロジー専門学校 入学'},
+    {year: '2024年10月',event: '海外研修でアメリカへ'},
+        
+        
+
+    
 ]
 
 
