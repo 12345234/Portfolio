@@ -229,6 +229,7 @@ export const timeline:TimelineItem[]=[
     {year: '2024年4月',event: '京都デザイン&テクノロジー専門学校 入学'},
     {year: '2024年10月',event: '海外研修でアメリカへ'},
     {year: '2025年2月',event: '学内制作展にてゲーム展示'},
+    {year: '2025年12月',event: 'EGG25にてゲーム展示'},
     {year: '2026年2月',event: '学内制作展にてゲーム展示'},
 
 
