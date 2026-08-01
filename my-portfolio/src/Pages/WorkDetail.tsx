@@ -88,6 +88,11 @@ export default function WorkDetail(){
                             <p className="wd-text">{work.performance}</p>
                         </Section>
                     )}
+                    {work.reflection && (
+                        <Section title="反省点">
+                            <p className="wd-text">{work.reflection}</p>
+                        </Section>
+                    )}
 
                 </div>
 

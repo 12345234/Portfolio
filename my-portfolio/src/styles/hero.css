@@ -39,7 +39,7 @@
   gap: 8px;
   font-family: var(--font-en);
   font-size: 0.85rem;
-  color: #210fc4;
+  color: var(--color-accent-2);
   margin-bottom: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -50,7 +50,7 @@
   content: '';
   width: 32px;
   height: 1px;
-  background: var(--color-accent);
+  background: currentColor;
 }
 
 .hero-name 
@@ -87,7 +87,8 @@
 .hero-role 
 {
   font-size: 1.1rem;
-  color: #185ebe;
+  color: var(--color-text);
+  font-weight: 600;
   margin-bottom: 24px;
 }
 
@@ -176,4 +177,12 @@
   font-size: 3rem;
   margin-bottom: 32px;
   box-shadow: 0 0 60px rgba(124, 106, 247, 0.3); 
+}
+
+.avatar-placeholder img
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }

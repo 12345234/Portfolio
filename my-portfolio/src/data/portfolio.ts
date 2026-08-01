@@ -1,6 +1,8 @@
 import type { IconType } from 'react-icons'
 import { FaGamepad, FaGlobe, FaCube, FaFolder } from 'react-icons/fa6'
 import runGameScreenshot from '../assets/3DRun.png'
+import companyAnimalScreenshot from '../assets/syati.png'
+import profileIcon from '../assets/icon.png'
 //プロフィール
 export interface Profile{
     name: string //名前漢字表記
@@ -57,12 +59,13 @@ export interface Work{
     implementationThene:string | null//実装解説
     troublesooting:string|null//詰まった問題と解決策
     performance:string|null//パフォーマンス改善の工夫
+    reflection:string | null//反省点
 }
 
 export interface GameJam{
     name:string//名前
     date:string//日時
-    theme:string//情報
+    theme:string|null//情報
     description:string//作品詳細
     platform:string[]//プラットフォーム
     role:string//担当箇所
@@ -105,11 +108,11 @@ export const profile:Profile = {
     graduationYear: "2028年3月卒業見込み",
     bio: "ゲームが好きで専門学校へ入学。\n心を動かすゲームを制作することが目標",
     motto: "ワクワクを、すべての人へ",
-    avater: "null",
+    avater: profileIcon,
     links: {
         Github: "https://github.com/ika9812",
         twitter: "https://x.com/aadd390768",
-        email: "KTC24A31A0066@edu.kyoto-tech.ac.jp"
+        email: "mailto:KTC24A31A0066@edu.kyoto-tech.ac.jp"
     }
 }
 
@@ -166,19 +169,20 @@ export const works:Work[]=[
         link: "",
         venues: [],
         techpoint: "ObjectPoolでステージを管理しメモリ使用量を抑えました。fogを使用して視認性を低下させることでゲーム性が向上しました。",
-        designNotes: null,
+        designNotes: "CharactoControllerでの移動でタイルのつなぎ目ての詰まりを解消。",
         implementationThene: "",
         troublesooting: "ステージの生成間隔に不具合が発生。オブジェクトのサイズを計算して隙間なく生成することに成功しました。",
-        performance: ""
+        performance: "",
+        reflection:""
     },//配列ごとに作品を作っていく
     {
         id: 2,
         title: "しゃちくん!",
         genre: "3Dシュミレーション",
         category: "game",
-        thumbnail: '',
-        screenshots: [],
-        description: "2年次前期にチームで制作,初チーム制作",
+        thumbnail: companyAnimalScreenshot,
+        screenshots: [companyAnimalScreenshot],
+        description: "2年次前期にチームで制作。\n初のチーム制作。",
         tags: ['Unity','C#'],
         platform: ['Windows'],
         period: "約５ヶ月",
@@ -190,23 +194,24 @@ export const works:Work[]=[
         techpoint: "カメラを切り替えてのミニゲーム実装",
         designNotes: null,
         implementationThene: "",
-        troublesooting: "初のチーム制作で完成させることを第一に考えていたためプログラムの設計が上手くできなかった。",
-        performance: ""
+        troublesooting: "",
+        performance: null,
+        reflection:"初のチーム制作で完成させることを第一に考えていたためプログラムの設計が上手くできなかった。"
     },
 ]
 
 export const gamejam:GameJam[]=[
     {
-        name: "",
-        date: "",
-        theme: "",
-        description: "",
-        platform: [""],
-        role: "",
-        team: "",
-        result: "",
-        url: "",
-        reflection: ""
+        name: "Unity1week",
+        date: "参加検討中",
+        theme: null,
+        description: "Unityを使って1週間でゲームを制作するUnity1weekに興味があり、今後の参加を目指して制作力を高めています。",
+        platform: ["WebGL"],
+        role: "企画・プログラム",
+        team: "個人参加を想定",
+        result: null,
+        url: null,
+        reflection: "短期間でアイデアを形にして完成させる力を身につけ、他の参加者の作品からも学びたいと考えています。"
     }
 ]
     
@@ -223,6 +228,10 @@ export const certification:Ceartification[]=[
 export const timeline:TimelineItem[]=[
     {year: '2024年4月',event: '京都デザイン&テクノロジー専門学校 入学'},
     {year: '2024年10月',event: '海外研修でアメリカへ'},
+    {year: '2025年2月',event: '学内制作展にてゲーム展示'},
+    {year: '2026年2月',event: '学内制作展にてゲーム展示'},
+
+
         
         
 
