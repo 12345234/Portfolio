@@ -102,8 +102,8 @@ export const profile:Profile = {
     school: "京都デザイン&テクノロジー専門学校",
     department: "スーパーゲームクリエイター専攻",
     graduationYear: "2028年3月卒業見込み",
-    bio: "aaaaa",
-    motto: "aaaa",
+    bio: "ゲームが好きで専門学校へ入学。\n心を動かすゲームを制作することが目標",
+    motto: "ワクワクを、すべての人へ",
     avater: "null",
     links: {
         Github: "https://github.com/ika9812",
