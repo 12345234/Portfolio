@@ -1,5 +1,6 @@
 import type { IconType } from 'react-icons'
 import { FaGamepad, FaGlobe, FaCube, FaFolder } from 'react-icons/fa6'
+import runGameScreenshot from '../assets/3DRun.png'
 //プロフィール
 export interface Profile{
     name: string //名前漢字表記
@@ -153,8 +154,8 @@ export const works:Work[]=[
         title: "3Dランゲーム",
         genre: "3Dアクション",
         category: "game",
-        thumbnail: './assets/3DRun.png',
-        screenshots: [],
+        thumbnail: runGameScreenshot,
+        screenshots: [runGameScreenshot],
         description: "Unityで制作した3Dランゲーム。",
         tags: ['Unity','C#'],
         platform: ['Windows','Web'],
