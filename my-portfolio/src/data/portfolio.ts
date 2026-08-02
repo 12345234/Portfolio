@@ -3,6 +3,7 @@ import { FaGamepad, FaGlobe, FaCube, FaFolder } from 'react-icons/fa6'
 import runGameScreenshot from '../assets/3DRun.png'
 import companyAnimalScreenshot from '../assets/syati.png'
 import profileIcon from '../assets/icon.png'
+import syati from '../assets/syati.gif'
 //プロフィール
 export interface Profile{
     name: string //名前漢字表記
@@ -180,8 +181,8 @@ export const works:Work[]=[
         title: "しゃちくん!",
         genre: "3Dシュミレーション",
         category: "game",
-        thumbnail: companyAnimalScreenshot,
-        screenshots: [companyAnimalScreenshot],
+        thumbnail: syati,
+        screenshots: [syati],
         description: "2年次前期にチームで制作。\n初のチーム制作。",
         tags: ['Unity','C#'],
         platform: ['Windows'],
