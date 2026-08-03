@@ -6,7 +6,7 @@ export default function Contact() {
   const links: { label: string; icon: ReactNode; href: string | null }[] = [
     { label: 'GitHub', icon: <FaGithub />, href: profile.links.Github },
     { label: 'Twitter / X', icon: <FaXTwitter />, href: profile.links.twitter },
-    { label: 'Email', icon: <FaEnvelope />, href: `mailto:${profile.links.email}`},
+    { label: 'Email', icon: <FaEnvelope />, href: `${profile.links.email}`},
   ]
 
   return (
